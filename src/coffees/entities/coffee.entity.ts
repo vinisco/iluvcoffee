@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-
-@Entity()
-=======
 import {
   Column,
   Entity,
@@ -13,7 +8,6 @@ import {
 import { Flavor } from './flavor.entity';
 
 @Entity() // sql table === 'coffee'
->>>>>>> e0f39d8dad6cbc86f20e3d3a694c9253c48152a7
 export class Coffee {
   @PrimaryGeneratedColumn()
   id: number;
@@ -24,10 +18,6 @@ export class Coffee {
   @Column()
   brand: string;
 
-<<<<<<< HEAD
-  @Column('json', { nullable: true })
-  flavors: string[];
-=======
   @Column({ nullable: true })
   description: string;
 
@@ -39,5 +29,4 @@ export class Coffee {
     cascade: true,
   })
   flavors: Flavor[];
->>>>>>> e0f39d8dad6cbc86f20e3d3a694c9253c48152a7
 }
